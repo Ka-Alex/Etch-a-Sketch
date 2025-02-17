@@ -35,6 +35,6 @@
 } 
 
 .item {
-    border: 1px dashed black;
+    border: 0.5px solid black;
     flex: 1;
 }
