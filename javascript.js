@@ -2,9 +2,10 @@
 //Variables declarations
 let userInput = 16;
 let container = document.querySelector('#container');
-const btn = document.querySelector('button');
+const resizeGridButton = document.querySelector('#resizeGridButton');
+const clearGridButton = document.querySelector('#clearGridButton');
 
-btn.addEventListener('click', () => {
+resizeGridButton.addEventListener('click', () => {
 //values input by user authorized between 2 and 100
 do {
     userInput = prompt('Enter the size of the grid (between 2 and 100)');
@@ -28,6 +29,13 @@ if(Number.isInteger(userInput) === false) {
   }
 
 } while ((userInput > 100 || userInput < 2))
+});
+
+clearGridButton.addEventListener('click', () => {
+    let items= document.querySelectorAll('.item');
+    items.forEach(element => {
+        element.removeAttribute('style');
+    });
 });
 
 
